@@ -3,6 +3,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Header } from "./components/Header";
 import { BookList } from "./components/BookList";
+import { Timer } from "./components/Timer";
+import {Clicker} from "./components/Clicker";
+import {Counter } from "./components/Counter";
 
 function App() {
   const books = [
@@ -102,10 +105,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Counter/>
+        <Timer />
         <img src={logo} className="App-logo" alt="logo" />
-        <Header title="Hello from props 2!" />
+        <Header><span className="fancy-font">Book</span> Library</Header>
         {/* {headerElement} */}
         <BookList books={books}/>
+        <Clicker/>
       </header>
     </div>
   );
